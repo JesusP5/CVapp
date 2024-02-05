@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, View, Text, StyleSheet, SafeAreaView, Image} from 'react-native';
+import { ScrollView, View, Text, StyleSheet, SafeAreaView, Image, TouchableOpacity, Linking} from 'react-native';
 
 const App = () => {
   const profile_photo = {
@@ -31,7 +31,7 @@ const App = () => {
         <Text style={styles.heading}>Experiencia Laboral y Academica</Text>
         <Text>Participacion y 4to lugar en Hackathon 2022 - UAQ</Text>
         <Text>Participacion y 4to lugar en Hackathon 2023 - UAQ</Text>
-        <Text>Soporte TI(Actualmente)</Text>
+        <Text>Puesto de Soporte TI(Actualmente)</Text>
       </View>
 
       <View style={[styles.section, {backgroundColor: "#A4FABC"}]}>
@@ -51,7 +51,20 @@ const App = () => {
           <Image  source={require('./src/images/react.png')} style={styles.imagesTecs}/>
         </View>
       </View>
+      <View style={{ backgroundColor: "#AAFAF7",paddingBottom: 25, alignItem: 'center' }}>
+        <Text style={styles.heading}>Proyectos que he realizado</Text>
+        <Text style={styles.subHeading}>Viritzion</Text>
+        <Text>Esta es una aplicacion web y movil que empezamos a desarrollar mi equipo y yo en el Hackathon 2023 de la UAQ. La aplicacion surge de la problematica con los conflictos que suelen existir en la validacion de contratos o documentos legislativos. Para mas informacion leer la documentacion.</Text>
+        <TouchableOpacity onPress={() => Linking.openURL('https://github.com/JesusP5/virizionapp.git')}>
+          <Image source={require('./src/images/viritzion.png')} style={[styles.imagesTecs, {paddingTop: 0}]}/>
+        </TouchableOpacity>
 
+        <Text style={styles.subHeading}>Cluster sencillo</Text>
+        <Text>Este es un pequeño proyecto que se realizo para la materia de Servicios Distribuidos donde realizamos una simulacion de clustering. Esto se logro enviando un video desde un servidor el cual habia recibido el video de un cliente a 3 computadoras (esclavos) y estos procesaban el video con una libreria de python devolvian el video procesado y este era enviado de vuelta al cliente desde el servidor. </Text>
+        <TouchableOpacity onPress={() => Linking.openURL('https://github.com/JesusP5/virizionapp.git')}>
+        <Text style={{color: 'blue'}}>Aqui el repositorio disponible.</Text>
+        </TouchableOpacity>
+        </View>
     </ScrollView>
     </SafeAreaView>
   );
@@ -77,6 +90,11 @@ const styles = StyleSheet.create({
     width:'40%',
     marginTop: 20,
     marginLeft: 25
+  },
+  subHeading:{
+    fontSize: 16,
+    fontWeight: 'bold',
+    paddingTop: 5
   }
 });
 
