@@ -7,7 +7,7 @@ const profile_photo = {
   width: 225,
   height: 225
 }
-
+const statusBarHeight = StatusBar.currentHeight || 0;
 const App=()=> {
   return (
     <SafeAreaView style={styles.container}>

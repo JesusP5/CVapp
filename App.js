@@ -13,34 +13,34 @@ const App = () => {
   return (
     <SafeAreaView style={styles.containerSafe}>
     <ScrollView style={styles.container}>
-      <View style={{alignItems: 'center'}}>
+      <View style={{alignItems: 'center', backgroundColor: "#AAFAF7", borderTopLeftRadius: 10, borderTopRightRadius: 10}}>
         <Text style={{fontSize: 100, fontWeight: 'bold'}}>Hello World!</Text>
         <Image source={profile_photo} style={{borderRadius: 225/2, marginBottom: 1}} />
         <Text style={{marginBottom:15}}>(Soy el de rojo xd)</Text>
         <Text style={{fontSize: 25, fontWeight: 'bold', marginBottom: 10}}>Curricum</Text>
-
       </View>
-      <View style={styles.section}>
+
+      <View style={[styles.section, {backgroundColor: "#ACFADD"}]}>
         <Text style={styles.heading}>Información Personal</Text>
         <Text>Nombre: Jesus Alejandro Avendaño Peña</Text>
         <Text>Correo: jesuson567@hotmail.com</Text>
         <Text>Numero: 4425990426</Text>
       </View>
 
-      <View style={styles.section}>
+      <View style={[styles.section, {backgroundColor: "#88FA7F"}]}>
         <Text style={styles.heading}>Experiencia Laboral y Academica</Text>
         <Text>Participacion y 4to lugar en Hackathon 2022 - UAQ</Text>
         <Text>Participacion y 4to lugar en Hackathon 2023 - UAQ</Text>
         <Text>Soporte TI(Actualmente)</Text>
       </View>
 
-      <View style={styles.section}>
+      <View style={[styles.section, {backgroundColor: "#A4FABC"}]}>
         <Text style={styles.heading}>Educación</Text>
         <Text>Ingeniería de Software - Universidad Autonoma de Queretaro</Text>
         <Text>6to Semestre</Text>
       </View>
 
-      <View>
+      <View style={[styles.section, {backgroundColor: "#B7FA78"}]}>
         <Text style={styles.heading}>Tecnologias</Text>
         <View style={{flexDirection: 'row'}}>
           <Image  source={require('./src/images/python.png')} style={styles.imagesTecs}/>
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   section: {
-    marginBottom: 20,
+    paddingBottom: 20
   },
   heading: {
     fontSize: 18,
